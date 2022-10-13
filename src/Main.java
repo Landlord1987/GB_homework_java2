@@ -42,6 +42,18 @@ public class Main {
             }
             System.out.println();
         }
-        // 5-7 Выполню в срок до 16.10.2022 г.
+        // Task5
+        int[] arr4 = {1, 5, 3, 18, 11, 4, 6, 7, 12, 8, 9, 10};
+        int min = arr4[0], max = arr4[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr4[i] < min) {
+                min = arr4[i];
+            } else if (arr4[i] > max) {
+                max = arr4[i];
+            }
+        }
+        System.out.println("\n" + "Task5:" + "\n" + "min=" + min);
+        System.out.println("max=" + max);
+        // Task6-7 I solve the task before 16.10.2022 г.
     }
 }
