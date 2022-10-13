@@ -29,6 +29,19 @@ public class Main {
             }
             System.out.print(arr3[i] + " ");
         }
-        // 4-7 Выполню в срок до 16.10.2022 г.
+        // Task4
+        byte f = 1;
+        int[][] table = new int[4][4];
+        System.out.println("\n" + "Task4: ");
+        for (int g = 0; g < table.length; g++) {
+            for (int h = 0; h < table.length; h++) {
+                if (g == h) {
+                    table[g][h] = f;
+                } else table[g][h] = 0;
+                System.out.print(table[g][h] + " ");
+            }
+            System.out.println();
+        }
+        // 5-7 Выполню в срок до 16.10.2022 г.
     }
 }
