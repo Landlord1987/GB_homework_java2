@@ -54,6 +54,40 @@ public class Main {
         }
         System.out.println("\n" + "Task5:" + "\n" + "min=" + min);
         System.out.println("max=" + max);
-        // Task6-7 I solve the task before 16.10.2022 г.
+        // Task6
+        int[] arr6 = {1, 1, 2, 2, 1};
+        checkBalance(arr3);
+
+        // Task7 I solve the task before 16.10.2022 г.
+    }
+
+    // Task6
+    public static void checkBalance(int[] arr5) {
+        int sum1 = 0, sum2 = 0, counter1 = 0, q = 0;
+        for (int i = 0; i < arr5.length; i++) {
+            sum1 += arr5[i];
+            sum2 = 0;
+            counter1++;
+            for (int j = i + 1; j < arr5.length; j++) {
+                sum2 += arr5[j];
+            }
+            if (sum1 == sum2) {
+                System.out.println("\n" + "Task6: " + "sum1 " + sum1 + " =" + " sum2 " + sum2);
+                System.out.print("[");
+                for (q = 0; q < arr5.length; q++) {
+                    if (q < counter1) {
+                        System.out.print(arr5[q] + ", ");
+                    }
+                }
+                System.out.print("||");
+                for (q = 0; q < arr5.length; q++) {
+                    if (q >= counter1) System.out.print(arr5[q] + ", ");
+                }
+                System.out.println("]");
+                return;
+            }
+
+        }
+        System.out.println("\n" + "Баланса нет");
     }
 }
