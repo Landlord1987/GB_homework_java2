@@ -58,7 +58,8 @@ public class Main {
         int[] arr6 = {1, 1, 2, 2, 1};
         checkBalance(arr3);
 
-        // Task7 I solve the task before 16.10.2022 г.
+        // Task7
+        changeMassive(arr4, 1);
     }
 
     // Task6
@@ -90,4 +91,44 @@ public class Main {
         }
         System.out.println("\n" + "Баланса нет");
     }
+
+    // Task7 I'm don't do it((
+    public static void changeMassive(int[] arr, int n) {
+        System.out.print("\n" + "Task7: ");
+//        int i = 0;
+//        do  {
+//            if (i + n < 0) {
+//                arr[i] = arr[arr.length - 1 + i - n];
+//            } else if (i + n >= arr.length) {
+//                arr[i] = arr[arr.length - 1 - i + n];
+//            } else if(i + n >= 0 && i + n < arr.length){
+//                arr[i] = arr[i + n];
+//            }
+//            i++;
+//        } while (i < arr.length);
+        int[] arr2 = arr;
+//        for (int i = 0; i < arr.length; i++) {
+//            int l = arr[i];
+//            arr2[i] = l;
+//        }
+        for (int i = 0; i < arr2.length; i++) {
+            int k = i + n;
+            if (k >= arr2.length) {
+                k -= arr2.length;
+                arr2[i] = arr[k];
+            } else if (k < 0) {
+                k += arr2.length;
+                arr2[i] = arr[k];
+            } else if (k >= 0 && k < arr2.length) {
+                arr2[i] = arr[k];
+            }
+            System.out.print(arr[i] + ", ");
+        }
+//        arr = arr2;
+        System.out.println();
+        for (int j = 0; j < arr.length; j++) {
+            System.out.print(arr[j] + ", ");
+        }
+    }
+
 }
